@@ -54,7 +54,7 @@
       <!-- Секция приветствие -->
       <section class="hero">
         <h1 class="hero-title">Эффективные решения<br />для вашего бизнеса</h1>
-        <button class="modal-open-button" data-modal-open>
+        <button class="modal-button" data-modal-open>
           Заказать услугу
         </button>
       </section>
@@ -413,27 +413,27 @@
             <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
 
             <label class="form-field">
-              Имя
+              <span class="form-label">Имя</span>
               <input type="text" name="Name" />
             </label>
             <label class="form-field">
-              Телефон
+              <span class="form-label">Телефон</span>
               <input type="tel" name="Telephone" />
             </label>
             <label class="form-field">
-              Почта
+              <span class="form-label">Почта</span>
               <input type="email" name="Mail" />
             </label>
             <label class="form-field comment">
-              Комментарий
+              <span class="form-label">Комментарий</span>
               <textarea class="comment-field" name="Comment"></textarea>
             </label>
-            <label>
+            <label class="agreement">
               <input type="checkbox" name="agreement" />
               Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a>
             </label>
 
-            <button class="button-submit" type="submit" data-modal-close>
+            <button class="modal-button" type="submit" data-modal-close>
               Отправить
             </button>
           </form>

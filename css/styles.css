@@ -216,13 +216,13 @@ header {
   text-transform: uppercase;
 }
 
-.hero > .modal-open-button {
-  display: inline-block;
+.modal-button {
   min-width: 200px;
   padding: 10px 32px;
 
   color: var(--white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -708,6 +708,9 @@ footer .social-icon {
 
 /* Форма */
 .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 40px;
 }
 
@@ -717,21 +720,42 @@ footer .social-icon {
   font-weight: 700;
   font-size: 20px;
   line-height: 23px;
-  text-align: center;
 
   color: var(--titles-color);
 }
 
 .form-field {
-  display: block;
+  position: relative;
+
   margin-bottom: 28px;
+  width: 100%;
 }
 
 .form-field input {
   display: block;
   margin: 0;
-  padding: 0;
+  padding: 12px 42px;
   width: 100%;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  font-family: "Roboto", sans-serif;
+  color: var(--titles-color);
+}
+
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
 }
 
 .comment {
@@ -741,13 +765,36 @@ footer .social-icon {
 .comment-field {
   display: block;
   margin: 0;
-  padding: 0;
+  padding: 12px 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 
   resize: none;
   width: 100%;
   min-height: 120px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  font-family: "Roboto", sans-serif;
+  color: var(--titles-color);
 }
 
-.button-submit {
-  display: block;
+.comment .form-label {
+  top: 12px;
+  left: 16px;
+  transform: translateY(0);
+}
+
+.agreement {
+  margin-bottom: 30px;
+
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.agreement a {
+  text-decoration-line: underline;
+  color: var(--accent-color);
 }
