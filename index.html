@@ -53,10 +53,10 @@
     <main>
       <!-- Секция приветствие -->
       <section class="hero">
-        <h1 class="hero-title">
-          Эффективные решения<br/>для вашего бизнеса
-        </h1>
-        <a class="link" href="">Заказать услугу</a>
+        <h1 class="hero-title">Эффективные решения<br />для вашего бизнеса</h1>
+        <button class="modal-open-button" data-modal-open>
+          Заказать услугу
+        </button>
       </section>
 
       <!-- Принципы работы (потом скрыть заголовок) -->
@@ -406,6 +406,16 @@
           </ul>
         </div>
       </section>
+
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <form class="form">
+            <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+
+            <button type="submit" data-modal-close>Отправить</button>
+          </form>
+        </div>
+      </div>
     </main>
     <footer>
       <div class="container flex-container">
@@ -467,5 +477,6 @@
         </p>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
