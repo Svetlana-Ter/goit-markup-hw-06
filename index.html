@@ -412,7 +412,30 @@
           <form class="form">
             <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
 
-            <button type="submit" data-modal-close>Отправить</button>
+            <label class="form-field">
+              Имя
+              <input type="text" name="Name" />
+            </label>
+            <label class="form-field">
+              Телефон
+              <input type="tel" name="Telephone" />
+            </label>
+            <label class="form-field">
+              Почта
+              <input type="email" name="Mail" />
+            </label>
+            <label class="form-field comment">
+              Комментарий
+              <textarea class="comment-field" name="Comment"></textarea>
+            </label>
+            <label>
+              <input type="checkbox" name="agreement" />
+              Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a>
+            </label>
+
+            <button class="button-submit" type="submit" data-modal-close>
+              Отправить
+            </button>
           </form>
         </div>
       </div>

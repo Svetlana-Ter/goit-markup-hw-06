@@ -710,3 +710,44 @@ footer .social-icon {
 .form {
   padding: 40px;
 }
+
+.form-title {
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+
+  color: var(--titles-color);
+}
+
+.form-field {
+  display: block;
+  margin-bottom: 28px;
+}
+
+.form-field input {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.comment {
+  margin-bottom: 20px;
+}
+
+.comment-field {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  resize: none;
+  width: 100%;
+  min-height: 120px;
+}
+
+.button-submit {
+  display: block;
+}
