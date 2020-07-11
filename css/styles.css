@@ -787,6 +787,35 @@ footer .social-icon {
   transform: translateY(0);
 }
 
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+
+  width: 18px;
+  height: 18px;
+
+  fill: var(--titles-color);
+}
+
+.form-field:focus-within > .form-label {
+  transform: translate(-26px, calc(50% - 44px));
+  font-size: 12px;
+  line-height: 1.17;
+
+  color: var(--accent-color);
+}
+
+.form-field:focus-within > input {
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+}
+
+.form-field:focus-within > .form-icon {
+  fill: var(--accent-color);
+}
+
 .agreement {
   margin-bottom: 30px;
 
