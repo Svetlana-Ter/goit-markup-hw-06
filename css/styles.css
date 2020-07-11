@@ -751,14 +751,32 @@ footer .social-icon {
   position: absolute;
   top: 50%;
   left: 42px;
-  transform: translateY(-50%);
+  transform: translate(0, -50%);
 
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
 }
 
+.form-field:focus-within > .form-label,
+input:not(:placeholder-shown) + .form-label {
+  transform: translate(-26px, calc(50% - 44px));
+  font-size: 12px;
+  line-height: 1.17;
+
+  color: var(--accent-color);
+}
+
+.form-field:focus-within > input,
+.comment:focus-within > .comment-field {
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  outline: none;
+}
+
 .comment {
+  position: relative;
+  width: 100%;
   margin-bottom: 20px;
 }
 
@@ -781,10 +799,24 @@ footer .social-icon {
   color: var(--titles-color);
 }
 
-.comment .form-label {
+.comment-label {
+  position: absolute;
+
   top: 12px;
   left: 16px;
-  transform: translateY(0);
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+}
+
+.comment:focus-within > .comment-label,
+.comment-field:not(:placeholder-shown) + .comment-label {
+  transform: translate(0, calc(-100% - 16px));
+  font-size: 12px;
+  line-height: 1.17;
+
+  color: var(--accent-color);
 }
 
 .form-icon {
@@ -797,19 +829,6 @@ footer .social-icon {
   height: 18px;
 
   fill: var(--titles-color);
-}
-
-.form-field:focus-within > .form-label {
-  transform: translate(-26px, calc(50% - 44px));
-  font-size: 12px;
-  line-height: 1.17;
-
-  color: var(--accent-color);
-}
-
-.form-field:focus-within > input {
-  border: 1px solid var(--accent-color);
-  border-radius: 4px;
 }
 
 .form-field:focus-within > .form-icon {
