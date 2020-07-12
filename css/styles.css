@@ -836,10 +836,42 @@ input:not(:placeholder-shown) + .form-label {
 }
 
 .agreement {
-  margin-bottom: 30px;
+  position: relative;
 
+  margin-bottom: 30px;
+}
+
+.agreement-label {
   font-size: 14px;
   line-height: 1.71;
+}
+
+.agreement-label::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translate(-100%, -50%);
+
+  width: 16px;
+  height: 15px;
+
+  background-image: url(../images/checkbox.svg);
+}
+
+.checkbox:checked + .agreement-label::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translate(-100%, -50%);
+
+  width: 16px;
+  height: 15px;
+
+  background-image: url(../images/checkbox-checked.svg);
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 .agreement a {
