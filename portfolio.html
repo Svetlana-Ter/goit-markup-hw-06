@@ -286,38 +286,51 @@
           <ul class="social-media">
             <li>
               <a href="" class="social-link">
-                <svg class="social-icon">
+                <svg aria-label="Инстаграм" class="social-icon">
                   <use href="./images/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a href="" class="social-link"
-                ><svg class="social-icon">
+                ><svg aria-label="Твиттер" class="social-icon">
                   <use href="./images/sprite.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a href="" class="social-link"
-                ><svg class="social-icon">
+                ><svg aria-label="Фейсбук" class="social-icon">
                   <use href="./images/sprite.svg#icon-facebook"></use></svg
               ></a>
             </li>
             <li>
               <a href="" class="social-link"
-                ><svg class="social-icon">
+                ><svg aria-label="Линкедин" class="social-icon">
                   <use href="./images/sprite.svg#icon-linkedin"></use></svg
               ></a>
             </li>
           </ul>
         </div>
 
-        <div class="subscribe">
-          <b class="title">
+        <form class="subscribe">
+          <label class="subscribe-label" for="subscribe">
             Подпишитесь на рассылку
-          </b>
-        </div>
+          </label>
+          <input
+            class="subscribe-email"
+            type="email"
+            name="email"
+            id="subscribe"
+            placeholder="E-mail"
+          />
+          <button class="subscribe-button">
+            Подписаться
+            <svg aria-label="Подписаться" class="icon-subscribe">
+              <use href="./images/sprite.svg#icon-subscribe"></use>
+            </svg>
+          </button>
+        </form>
       </div>
       <div class="container">
         <p class="copyright">
