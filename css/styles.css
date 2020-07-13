@@ -55,6 +55,17 @@ img {
   display: block;
 }
 
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -155,8 +166,6 @@ header {
   display: inline-flex;
   align-items: center;
 
-  transition: color 250ms var(--time-function);
-
   color: var(--primary-text-color);
 
   font-style: normal;
@@ -164,6 +173,8 @@ header {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition: color 250ms var(--time-function);
 }
 
 .icon-envelope {
@@ -235,16 +246,6 @@ header {
 }
 
 /* Секции */
-.visually-hidden {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
-}
 
 .section {
   padding-top: 94px;
@@ -486,7 +487,7 @@ footer {
   background-color: #2f303a;
 }
 
-footer .flex-container {
+footer > .flex-container {
   padding-top: 45px;
   padding-bottom: 28px;
   align-items: baseline;
@@ -550,19 +551,23 @@ footer .social-icon {
   padding: 15px 16px;
   min-width: 358px;
   margin-right: 12px;
+
   background-color: inherit;
+
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-}
 
-.subscribe-email::placeholder {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
 
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-email::placeholder {
+  line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -785,6 +790,8 @@ footer .social-icon {
   letter-spacing: 0.01em;
   font-family: "Roboto", sans-serif;
   color: var(--titles-color);
+
+  transition: border 250ms var(--time-function);
 }
 
 .form-label {
@@ -840,6 +847,8 @@ input:not(:placeholder-shown) + .form-label {
   letter-spacing: 0.01em;
   font-family: "Roboto", sans-serif;
   color: var(--titles-color);
+
+  transition: border 250ms var(--time-function);
 }
 
 .comment-label {
@@ -920,6 +929,9 @@ input:not(:placeholder-shown) + .form-label {
   background-image: url(../images/checkbox-checked.svg);
   background-color: var(--accent-color);
   border-radius: 2px;
+
+  transition: background-image 250ms var(--time-function),
+    background-color 250ms var(--time-function);
 }
 
 .agreement a {
@@ -931,6 +943,8 @@ input:not(:placeholder-shown) + .form-label {
   fill: #000000;
   width: 18px;
   height: 18px;
+
+  transition: fill 250ms var(--time-function);
 }
 
 .button-close {
